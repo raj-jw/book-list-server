@@ -1,0 +1,31 @@
+{
+  "name": "book-list-server",
+  "version": "1.0.0",
+  "description": "book list app server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raj-jw/book-list-server.git"
+  },
+  "keywords": [
+    "server",
+    "node",
+    "npm"
+  ],
+  "author": "Ria Agnes Jose and Justin Whitaker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raj-jw/book-list-server/issues"
+  },
+  "homepage": "https://github.com/raj-jw/book-list-server#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.4",
+    "pg": "^7.4.3"
+  }
+}
