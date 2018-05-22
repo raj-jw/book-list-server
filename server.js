@@ -15,10 +15,17 @@ app.use(cors());
 
 app.get('/', (req, res) => res.send('Testing 1, 2, 3'));
 app.get('/test', (req,res) => res.send('Hello, world!'));
-app.get('/books', (request, response) => {
+app.get('/api/v1/books', (request, response) => {
+  console.log('In api v1 books');
   let SQL = `SELECT * FROM books`;
   client.query( SQL )
-    .then(result => response.send(result.rows))
+    .then(result => {
+      console.log('Results from get all books', result.rows);
+      response.send(result.rows)
+      
+    })
+      
+
   });
 app.get('*', (req,res) => res.status(403).send('This route does not exist.'));
 
