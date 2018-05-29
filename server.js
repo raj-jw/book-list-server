@@ -16,11 +16,11 @@ app.use(cors());
 app.get('/', (req, res) => res.send('Testing 1, 2, 3'));
 app.get('/test', (req,res) => res.send('Hello, world!'));
 app.get('/api/v1/books', (request, response) => {
-  console.log('In api v1 books');
+  // console.log('In api v1 books');
   let SQL = `SELECT * FROM books`;
   client.query( SQL )
     .then(result => {
-      console.log('Results from get all books', result.rows);
+      // console.log('Results from get all books', result.rows);
       response.send(result.rows)
       
     })
